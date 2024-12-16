@@ -1542,3 +1542,5 @@ keyboard = InlineKeyboardMarkup(
 BUTTONS = InlineKeyboardMarkup([[InlineKeyboardButton(text="Send Here", url=f"https://t.me/ikunalx")]])
 
 bot.run()
+if __name__ == "__main__":
+    asyncio.run(main())
