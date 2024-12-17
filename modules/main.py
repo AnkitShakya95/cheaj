@@ -38,7 +38,7 @@ OWNER_IDS = [7341059064]  # Replace with the actual owner user IDs
 
 cookies_file_path = "modules/cookies.txt"
 # Global variables
-log_channel_id = -1002383275509
+log_channel_id = -1002471133201
 authorized_users = []
 ALLOWED_CHANNEL_IDS = []
 my_name = "𝐊𝐔𝐍𝐀𝐋❤️"
@@ -1466,7 +1466,7 @@ Feel free to contact @ikunalx for further assistance or subscription details.
 
 
 #============== Load initial data on startup =========================
-load_initial_data()
+
 
 #====================== Inline keyboard buttons =======================
 
