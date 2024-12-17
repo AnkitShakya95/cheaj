@@ -9,7 +9,7 @@ import subprocess
 import logging
 from utils import progress_bar
 import core as helper
-from config import BOT_TOKEN, API_ID, API_HASH, MONGO_URI, BOT_NAME
+from config import API_ID, API_HASH, BOT_TOKEN
 import aiohttp
 from aiohttp import ClientSession
 from pyromod import listen
@@ -38,6 +38,7 @@ OWNER_IDS = [7341059064]  # Replace with the actual owner user IDs
 
 cookies_file_path = "modules/cookies.txt"
 # Global variables
+log_channel_id = -1002383275509
 authorized_users = []
 ALLOWED_CHANNEL_IDS = []
 my_name = "𝐊𝐔𝐍𝐀𝐋❤️"
