@@ -84,15 +84,7 @@ async def start(client: Client, msg: Message):
             "Great!, You are a premium member! 🌟 press `/help` in order to use me properly\n\n",
             reply_markup=help_button_keyboard
         )
-    else:
-        await asyncio.sleep(2)
-        await start_message.edit_text(
-            Data.START.format(msg.from_user.mention) +
-            "You are currently using the free version. 🆓\n\n"
-            "I'm here to make your life easier by downloading videos from your **.txt** file 📄 and uploading them directly to Telegram!\n\n"
-            "Want to get started? Press /id\n\n💬 Contact @ikunalx to Get The Subscription 🎫 and unlock the full potential of your new bot! 🔓"
-        )
-
+    
 
 @bot.on_message(filters.command("stop"))
 async def stop_handler(_, message):
