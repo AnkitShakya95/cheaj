@@ -328,7 +328,7 @@ async def bot_running_time_handler(_, message):
     total_seconds = total_seconds % 60  
     await message.reply_text(f"⏲️ Total running time: {total_hours} hrs {total_minutes} mins {total_seconds} secs out of {max_running_time / 3600:.2f} hours")
 
-@bot.on_message(filters.command("reset_bot_running_time") & filters.user(USER_IDS))
+@bot.on_message(filters.command("reset_bot_running_time") )
 async def reset_bot_running_time_handler(_, message):
     global total_running_time
     parts = message.text.split()
