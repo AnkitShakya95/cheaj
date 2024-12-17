@@ -106,18 +106,6 @@ async def stop_handler(_, message):
         await message.reply_text("Bot is not running.", True)
 
 
-@bot.on_message(filters.command("check") & filters.create(user_filter))
-async def user_command(bot: Client, message: Message):
-    global OWNER_TEXT
-    await message.reply_text(USER_TEXT)
-
-
-# Help command handler
-@bot.on_message(filters.command("help") )
-async def help_command(client: Client, message: Message):
-    await message.reply(help_text, reply_markup=keyboard)
-
-
 #=================== TELEGRAM ID INFORMATION =============
 
 @bot.on_message(filters.private & filters.command("info"))
@@ -154,7 +142,7 @@ async def id(bot: Client, update: Message):
 
 #==========================  YOUTUBE EXTRACTOR =======================
 
-@bot.on_message(filters.command('youtube') & auth_or_owner_filter)
+@bot.on_message(filters.command('youtube') )
 async def run_bot(client: Client, message: Message):
     await message.delete()
     editable = await message.reply_text("Enter the YouTube Webpage URL And I will extract it into .txt file: ")
@@ -352,7 +340,7 @@ async def reset_bot_running_time_handler(_, message):
     else:
         await message.reply_text("❌ Invalid command. Use /reset_bot_running_time <hours>")
 
-@bot.on_message(filters.command("set_max_running_time") & filters.user(USER_IDS))
+@bot.on_message(filters.command("set_max_running_time") )
 async def set_max_running_time_handler(_, message):
     global max_running_time
     parts = message.text.split()
